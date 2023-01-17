@@ -72,7 +72,7 @@ main {
     background-image: url(images/icon-star.svg);
     background-repeat: no-repeat;
     background-position: center;
-    transform: scale(.88);
+    transform: scale(0.88);
 }
 
 .head {
@@ -90,7 +90,7 @@ main {
 
 ul {
     margin-top: 31px;
-    padding: 0;
+    padding: 0px;
     display: flex;
     justify-content: space-between;
 }
@@ -126,7 +126,7 @@ li {
     letter-spacing: 2.7px;
     font-family: 'Overpass', sans-serif;
     width: 99.5%;
-    padding: 12px 0;
+    padding: 12px 0px;
     margin-top: 23px;
     background-color: hsl(25, 97%, 53%);
     border: 2px solid hsl(25, 97%, 53%);
@@ -144,7 +144,7 @@ li {
 
 .rate-state img {
     margin-top: 5px;
-    transform: scale(.9);
+    transform: scale(0.9);
 }
 
 .rate-annouce {
