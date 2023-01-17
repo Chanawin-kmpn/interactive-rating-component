@@ -69,7 +69,7 @@ main {
     content: "";
     width: 100%;
     height: 100%;
-    background-image: url(/images/icon-star.svg);
+    background-image: url(images/icon-star.svg);
     background-repeat: no-repeat;
     background-position: center;
     transform: scale(.88);
