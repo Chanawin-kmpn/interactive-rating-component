@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: hsl(228, 11%, 9%);
+    font-family: 'Overpass', sans-serif;
+}
+
+main {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 154px auto;
+}
+
+.container {
+    width: 328px;
+    height: 360px;
+    position: relative;
+    transition: transform .6s;
+    perspective: 1000px;
+}
+
+.card {
+    transition: all 0.5s ease-out;
+    transform-style: preserve-3d;
+}
+
+.front-card,
+.back-card {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: hsl(215, 24%, 14%);
+    border-radius: 15px;
+    padding: 22px;
+    backface-visibility: hidden;
+}
+
+.star {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: hsl(210, 19%, 18%);
+    content: "";
+    margin: 2px;
+}
+
+.star::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/icon-star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(.88);
+}
+
+.head {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.52rem;
+    margin: 18px auto;
+}
+
+.desc {
+    color: hsl(217, 12%, 63%);
+    font-size: 0.88rem;
+    margin: -3px auto;
+    line-height: 21px;
+}
+
+ul {
+    margin-top: 31px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    display: inline-block;
+}
+
+.btn {
+    background-color: hsl(213, 19%, 18%);
+    width: 2.63rem;
+    height: 2.63rem;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding-top: 0.3rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: hsl(217, 12%, 63%);
+}
+
+.btn:focus {
+    background-color: hsl(25, 97%, 53%);
+}
+
+#submit-btn {
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    font-family: 'Overpass', sans-serif;
+    width: 99.5%;
+    padding: 12px 0;
+    margin-top: 23px;
+    background-color: hsl(25, 97%, 53%);
+    border: 2px solid hsl(25, 97%, 53%);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+
+
+.back-card {
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.rate-state img {
+    margin-top: 5px;
+    transform: scale(.9);
+}
+
+.rate-annouce {
+    color: hsl(25, 97%, 53%);
+    font-size: 0.9rem;
+    width: 60%;
+    margin: 16px auto;
+    padding: 5px;
+    background-color: hsl(210, 19%, 18%);
+    border-radius: 50px;
+}
+
+.thanks-part {
+    color: hsl(217, 12%, 63%);
+}
+
+.title {
+    margin-top: 27px;
+    font-size: 1.5rem;
+}
+
+.message {
+    font-size: 0.88rem;
+    margin-top: 13px;
+    line-height: 21px;
+}
+
+.flipped {
+    transform: rotateY(-180deg);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 80px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    main {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 410px;
+        height: 416px;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .front-card,
+    .back-card {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        padding: 32px;
+    }
+
+    .star {
+        width: 45px;
+        height: 45px;
+    }
+
+    .head {
+        font-size: 1.74rem;
+        margin-top: 34px;
+    }
+
+    .desc {
+        font-size: 0.94rem;
+        margin-top: -7px;
+        line-height: 23px;
+    }
+
+    ul {
+        width: 98%;
+    }
+
+    .btn {
+        font-size: 0.97rem;
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    #submit-btn {
+        width: 98.5%;
+        margin-top: 34px;
+    }
+
+    #submit-btn:hover {
+        color: hsl(25, 97%, 53%);
+        background-color: hsl(0, 0%, 100%);
+        border-color: hsl(0, 0%, 100%);
+        transition: all ease 0.3s;
+    }
+
+    .rate-state img {
+        width: 50%;
+        transform: scale(0.95);
+        margin-top: 14px;
+        margin-left: -10px;
+    }
+
+    .rate-annouce {
+        width: 55%;
+        font-size: 0.97rem;
+        margin-top: 22px;
+        padding: 7px 5px;
+        border-radius: 30px;
+    }
+
+    .title {
+        margin-top: 32px;
+        font-size: 1.73rem;
+    }
+
+    .message {
+        width: 98%;
+        font-size: 0.94rem;
+        margin-top: 13px;
+        line-height: 22.1px;
+    }
+}
